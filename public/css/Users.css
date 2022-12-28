@@ -1,0 +1,218 @@
+/* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(36, 72%, 48%);
+    --first-color-alt: hsl(36, 72%, 44%);
+    --black-color: hsl(206, 12%, 12%);
+    --card-color: hsl(0, 0%, 90%);
+    --title-color: hsl(206, 12%, 12%);
+    --text-color: hsl(206, 4%, 42%);
+    --text-color-light: hsl(206, 4%, 75%);
+    --body-color: hsl(206, 4%, 97%);
+    --container-color: #fff;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Lato', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-bold: 700;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+.main{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+section{
+  position: relative;  
+  height: 450px;
+  width: 1075px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper{
+  width: 950px;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: var(--first-color);
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+section .card .image{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--card-color);
+}
+
+section .card .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.card .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .media-icons i{
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card .media-icons i:hover{
+  opacity: 1;
+}
+
+.card .name-profession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: #000;
+} 
+
+.name-profession .name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-profession .profession{
+  font-size:15px;
+  font-weight: 500;
+}
+
+.card .rating{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.card .rating i{
+  font-size: 18px;
+  margin: 0 2px;
+  color: var(--first-color);
+}
+
+.card .button{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card .button a,
+.card .button button
+{
+  background: var(--first-color);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.new__user{
+    position: absolute;
+    top: 0;
+}
+
+.new__user .bg{
+    width: 100%;
+    background: var(--first-color);
+    border-radius: 1rem;
+}
+
+.new__user .bg a{
+    padding: 1rem 1rem 1rem;
+    color: #000;
+}
+
+.button a:hover{
+  background: var(--black-color);
+}
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: var(--first-color);
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: var(--first-color);
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: var(--first-color);
+}
